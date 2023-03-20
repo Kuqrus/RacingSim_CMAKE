@@ -11,6 +11,9 @@ void Camel::race(int distance) {
 
     if (time > getEnergy()) {
         restCounter = static_cast<int>(time) / getEnergy();
+        if (static_cast<int>(time) % restCounter == 0) {
+            restCounter--;
+        }
     }
 
     if (restCounter > 0) {
@@ -36,6 +39,9 @@ void FasterCamel::race(int distance) {
 
     if (time > getEnergy()) {
         restCounter = static_cast<int>(time) / getEnergy();
+        if (static_cast<int>(time) % restCounter == 0) {
+            restCounter--;
+        }
     }
 
     if (restCounter > 0) {
@@ -63,6 +69,9 @@ void Centaur::race(int distance) {
 
     if (time > getEnergy()) {
         restCounter = static_cast<int>(time) / getEnergy();
+        if (static_cast<int>(time) % restCounter == 0) {
+            restCounter--;
+        }
     }
 
     if (restCounter > 0) {
@@ -81,6 +90,9 @@ void Boots::race(int distance) {
 
     if (time > getEnergy()) {
         restCounter = static_cast<int>(time) / getEnergy();
+        if (static_cast<int>(time) % restCounter == 0) {
+            restCounter--;
+        }
     }
 
     if (restCounter > 0) {

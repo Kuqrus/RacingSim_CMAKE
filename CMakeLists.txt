@@ -3,10 +3,13 @@ project (RacingSim)
 
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
-add_executable(startRace RacingSim.cpp)
+set(CPP_EXE RacingSim.cpp userInputs.cpp registration.cpp race.cpp)
+set(H_EXE  userInputs.h registration.h race.h)
 
-set(CPP_FILES participants.cpp vehiclesMain.cpp vehiclesLand.cpp vehiclesAir.cpp userInputs.cpp registration.cpp race.cpp)
-set(H_FILES participants.h vehiclesMain.h vehiclesLand.h vehiclesAir.h userInputs.h registration.h race.h)
+add_executable(startRace ${CPP_EXE} ${H_EXE})
+
+set(CPP_FILES participants.cpp vehiclesMain.cpp vehiclesLand.cpp vehiclesAir.cpp )
+set(H_FILES participants.h vehiclesMain.h vehiclesLand.h vehiclesAir.h)
 
 add_library(dynamicLib SHARED ${CPP_FILES} ${H_FILES})
 
